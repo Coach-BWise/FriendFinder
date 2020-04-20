@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Survey Page</title>
+
+    <!-- Latest compiled and minified CSS & JS -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="jumbotron">
+        <h1 class="text-center">
+          <span class="fa fa-fire"></span> Friend Finder
+        </h1>
+        <hr />
+        <h2 class="text-center">Complete the Survey</h2>
+        <br />
+        <div class="text-center">
+          <a href="/">
+            <button class="btn btn-lg btn-default">
+              <span class="fa fa-home"></span>
+            </button>
+          </a>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-12">
+          <!-- Survey -->
+          <div class="card">
+            <div class="card-header"></div>
+            <div class="card-body">
+              <form role="form">
+                <div class="form-group">
+                  <h3><strong>Name</strong></h3>
+                  <input type="text" id="name" />
+                  <h3><strong>Question 1</strong></h3>
+                  <h5>
+                    You learn more from an instructional video than reading
+                    instructions.
+                  </h5>
+                  <p>1 (Strongly Disagree) - 5 (Strongly Agree)</p>
+                  <div class="form-check form-check-inline">
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name="q1Radio"
+                      value="1"
+                    />
+                    <label class="form-check-label">1</label>
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name="q1Radio"
+                      value="2"
+                    />
+                    <label class="form-check-label">2</label>
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name="q1Radio"
+                      value="3"
+                    />
+                    <label class="form-check-label" for="inlineRadio3">3</label>
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name="q1Radio"
+                      value="4"
+                    />
+                    <label class="form-check-label" for="inlineRadio4">4</label>
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name="q1Radio"
+                      value="5"
+                    />
+                    <label class="form-check-label" for="inlineRadio5">5</label>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <h3><strong>Question 2</strong></h3>
+                  <h5>
+                    You prefer classes like Math and Science over English and
+                    History.
+                  </h5>
+                  <p>1 (Strongly Disagree) - 5 (Strongly Agree)</p>
+                  <div class="form-check form-check-inline">
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name="q2Radio"
+                      value="1"
+                    />
+                    <label class="form-check-label" for="inlineRadio1">1</label>
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name="q2Radio"
+                      value="2"
+                    />
+                    <label class="form-check-label" for="inlineRadio2">2</label>
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name="q2Radio"
+                      value="3"
+                    />
+                    <label class="form-check-label" for="inlineRadio3">3</label>
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name="q2Radio"
+                      value="4"
+                    />
+                    <label class="form-check-label" for="inlineRadio4">4</label>
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name="q2Radio"
+                      value="5"
+                    />
+                    <label class="form-check-label" for="inlineRadio5">5</label>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <h3><strong>Question 3</strong></h3>
+                  <h5>You wish you were famous.</h5>
+                  <p>1 (Strongly Disagree) - 5 (Strongly Agree)</p>
+                  <div class="form-check form-check-inline">
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name="q3Radio"
+                      value="1"
+                    />
+                    <label class="form-check-label" for="inlineRadio1">1</label>
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name="q3Radio"
+                      value="2"
+                    />
+                    <label class="form-check-label" for="inlineRadio2">2</label>
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name="q3Radio"
+                      value="3"
+                    />
+                    <label class="form-check-label" for="inlineRadio3">3</label>
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name="q3Radio"
+                      value="4"
+                    />
+                    <label class="form-check-label" for="inlineRadio4">4</label>
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name="q3Radio"
+                      value="5"
+                    />
+                    <label class="form-check-label" for="inlineRadio5">5</label>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <h3><strong>Question 4</strong></h3>
+                  <h5>You are concerned with what others think.</h5>
+                  <p>1 (Strongly Disagree) - 5 (Strongly Agree)</p>
+                  <div class="form-check form-check-inline">
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name="q4Radio"
+                      value="1"
+                    />
+                    <label class="form-check-label" for="inlineRadio1">1</label>
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name="q4Radio"
+                      value="2"
+                    />
+                    <label class="form-check-label" for="inlineRadio2">2</label>
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name="q4Radio"
+                      value="3"
+                    />
+                    <label class="form-check-label" for="inlineRadio3">3</label>
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name="q4Radio"
+                      value="4"
+                    />
+                    <label class="form-check-label" for="inlineRadio4">4</label>
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name="q4Radio"
+                      value="5"
+                    />
+                    <label class="form-check-label" for="inlineRadio5">5</label>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <h3><strong>Question 5</strong></h3>
+                  <h5>You wash dishes after cooking dinner</h5>
+                  <p>1 (Strongly Disagree) - 5 (Strongly Agree)</p>
+                  <div class="form-check form-check-inline">
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name="q5Radio"
+                      value="1"
+                    />
+                    <label class="form-check-label" for="inlineRadio1">1</label>
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name="q5Radio"
+                      value="2"
+                    />
+                    <label class="form-check-label" for="inlineRadio2">2</label>
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name="q5Radio"
+                      value="3"
+                    />
+                    <label class="form-check-label" for="inlineRadio3">3</label>
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name="q5Radio"
+                      value="4"
+                    />
+                    <label class="form-check-label" for="inlineRadio4">4</label>
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name="q5Radio"
+                      value="5"
+                    />
+                    <label class="form-check-label" for="inlineRadio5">5</label>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <h3><strong>Question 6</strong></h3>
+                  <h5>You love cake</h5>
+                  <p>1 (Strongly Disagree) - 5 (Strongly Agree)</p>
+                  <div class="form-check form-check-inline">
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name="q6Radio"
+                      value="1"
+                    />
+                    <label class="form-check-label" for="inlineRadio1">1</label>
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name="q6Radio"
+                      value="2"
+                    />
+                    <label class="form-check-label" for="inlineRadio2">2</label>
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name="q6Radio"
+                      value="3"
+                    />
+                    <label class="form-check-label" for="inlineRadio3">3</label>
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name="q6Radio"
+                      value="4"
+                    />
+                    <label class="form-check-label" for="inlineRadio4">4</label>
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name="q6Radio"
+                      value="5"
+                    />
+                    <label class="form-check-label" for="inlineRadio5">5</label>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <h3><strong>Question 7</strong></h3>
+                  <h5>You eat meat.</h5>
+                  <p>1 (Strongly Disagree) - 5 (Strongly Agree)</p>
+                  <div class="form-check form-check-inline">
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name="q7Radio"
+                      value="1"
+                    />
+                    <label class="form-check-label" for="inlineRadio1">1</label>
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name="q7Radio"
+                      value="2"
+                    />
+                    <label class="form-check-label" for="inlineRadio2">2</label>
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name="q7Radio"
+                      value="3"
+                    />
+                    <label class="form-check-label" for="inlineRadio3">3</label>
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name="q7Radio"
+                      value="4"
+                    />
+                    <label class="form-check-label" for="inlineRadio4">4</label>
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name="q7Radio"
+                      value="5"
+                    />
+                    <label class="form-check-label" for="inlineRadio5">5</label>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <h3><strong>Question 8</strong></h3>
+                  <h5>You prefer dogs over cats.</h5>
+                  <p>1 (Strongly Disagree) - 5 (Strongly Agree)</p>
+                  <div class="form-check form-check-inline">
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name="q8Radio"
+                      value="1"
+                    />
+                    <label class="form-check-label" for="inlineRadio1">1</label>
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name="q8Radio"
+                      value="2"
+                    />
+                    <label class="form-check-label" for="inlineRadio2">2</label>
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name="q8Radio"
+                      value="3"
+                    />
+                    <label class="form-check-label" for="inlineRadio3">3</label>
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name="q8Radio"
+                      value="4"
+                    />
+                    <label class="form-check-label" for="inlineRadio4">4</label>
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name="q8Radio"
+                      value="5"
+                    />
+                    <label class="form-check-label" for="inlineRadio5">5</label>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <h3><strong>Question 9</strong></h3>
+                  <h5>You prefer the living room over the bedroom.</h5>
+                  <p>1 (Strongly Disagree) - 5 (Strongly Agree)</p>
+                  <div class="form-check form-check-inline">
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name="q9Radio"
+                      value="1"
+                    />
+                    <label class="form-check-label" for="inlineRadio1">1</label>
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name="q9Radio"
+                      value="2"
+                    />
+                    <label class="form-check-label" for="inlineRadio2">2</label>
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name="q9Radio"
+                      value="3"
+                    />
+                    <label class="form-check-label" for="inlineRadio3">3</label>
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name="q9Radio"
+                      value="4"
+                    />
+                    <label class="form-check-label" for="inlineRadio4">4</label>
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name="q9Radio"
+                      value="5"
+                    />
+                    <label class="form-check-label" for="inlineRadio5">5</label>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <h3><strong>Question 10</strong></h3>
+                  <h5>You enjoy games.</h5>
+                  <p>1 (Strongly Disagree) - 5 (Strongly Agree)</p>
+                  <div class="form-check form-check-inline">
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name="q10Radio"
+                      value="1"
+                    />
+                    <label class="form-check-label" for="inlineRadio1">1</label>
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name="q10Radio"
+                      value="2"
+                    />
+                    <label class="form-check-label" for="inlineRadio2">2</label>
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name="q10Radio"
+                      value="3"
+                    />
+                    <label class="form-check-label" for="inlineRadio3">3</label>
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name="q10Radio"
+                      value="4"
+                    />
+                    <label class="form-check-label" for="inlineRadio4">4</label>
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name="q10Radio"
+                      value="5"
+                    />
+                    <label class="form-check-label" for="inlineRadio5">5</label>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+          <button type="submit" class="btn btn-primary submit" id="submit">
+            Submit
+          </button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+
+<!-- BELOW CODE IS CRITICAL. IT HANDLES HOW FORM DATA IS SENT TO OUR SERVER -->
+<script type="text/javascript">
+  // In this code below we create the Front-end JavaScript which "POSTS" our form data to our express server.
+  // In essence, when the user hits submit, jQuery grabs all of the fields then sends a post request to our api
+  // Our api recognizes the route (/api/friends)... and then runs the associated code (found in apiRoutes.js).
+
+  $(".submit").on("click", function (event) {
+    event.preventDefault();
+
+    // Here we grab the form elements
+    var scores = [];
+    for (let i = 0; i < 10; i++) {
+      scores.push($(`input[name="q${i + 1}Radio"]:checked`).val());
+    }
+    var newFriend = {
+      name: $("#name").val(),
+      scores: scores,
+    };
+    console.log(newFriend);
+
+    // Essentially we give it a URL, we give it the object we want to send, then we have a "callback".
+    // The callback is the response of the server. In our case, we set up code in api-routes that "returns" true or false
+    // depending on if a tables is available or not.
+
+    $.post("/api/friends", newFriend, function (friends) {
+      var compatabilityScore = 40;
+      var currentScore = 0;
+      var count = 0;
+      var scoreIndex = 0;
+      var partner = {};
+
+      while (count < friends.length - 1) {
+        while (scoreIndex < scores.length) {
+          currentScore += Math.abs(
+            newFriend.scores[scoreIndex] - friends[count].scores[scoreIndex]
+          );
+          scoreIndex++;
+        }
+        if (currentScore < compatabilityScore) {
+          partner = friends[count];
+        }
+        scoreIndex = 0;
+        count++;
+      }
+      console.log(partner);
+
+      return partner;
+    });
+  });
+</script>
