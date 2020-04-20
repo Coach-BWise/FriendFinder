@@ -552,9 +552,55 @@
               </form>
             </div>
           </div>
-          <button type="submit" class="btn btn-primary submit" id="submit">
+          <button
+            type="submit"
+            class="btn btn-primary submit"
+            data-toggle="modal"
+            data-target="#partnerModal"
+            id="submit"
+          >
             Submit
           </button>
+        </div>
+      </div>
+      <div
+        class="modal fade"
+        id="partnerModal"
+        tabindex="-1"
+        role="dialog"
+        aria-labelledby="partnerModalLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="partnerModalLabel"></h5>
+              <button
+                type="button"
+                class="close"
+                data-dismiss="modal"
+                aria-label="Close"
+              >
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              ...add image here...
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" id="next">
+                Next
+              </button>
+              <button
+                type="button"
+                class="btn btn-secondary"
+                data-dismiss="modal"
+                id="close"
+              >
+                Close
+              </button>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -573,12 +619,16 @@
     // Here we grab the form elements
     var scores = [];
     for (let i = 0; i < 10; i++) {
-      scores.push($(`input[name="q${i + 1}Radio"]:checked`).val());
+      scores.push(parseInt($(`input[name="q${i + 1}Radio"]:checked`).val()));
+      $(`input[name="q${i + 1}Radio"]:checked`).prop("checked", false);
     }
     var newFriend = {
       name: $("#name").val(),
       scores: scores,
     };
+    var index = 0;
+    //clears name field on submit
+    $("#name").val("");
     console.log(newFriend);
 
     // Essentially we give it a URL, we give it the object we want to send, then we have a "callback".
@@ -586,28 +636,50 @@
     // depending on if a tables is available or not.
 
     $.post("/api/friends", newFriend, function (friends) {
-      var compatabilityScore = 40;
+      var compatabilityScore = -1;
       var currentScore = 0;
       var count = 0;
       var scoreIndex = 0;
       var partner = {};
-
+      var partners = [];
       while (count < friends.length - 1) {
         while (scoreIndex < scores.length) {
           currentScore += Math.abs(
-            newFriend.scores[scoreIndex] - friends[count].scores[scoreIndex]
+            parseInt(newFriend.scores[scoreIndex]) -
+              parseInt(friends[count].scores[scoreIndex])
           );
           scoreIndex++;
         }
-        if (currentScore < compatabilityScore) {
+        if (currentScore === compatabilityScore) {
           partner = friends[count];
+          partners.push(partner);
+        } else if (compatabilityScore === -1) {
+          compatabilityScore = currentScore;
+          partner = friends[count];
+          partners.push(partner);
+        } else if (currentScore < compatabilityScore) {
+          compatabilityScore = currentScore;
+          partner = friends[count];
+          partners = [];
+          partners.push(partner);
         }
+        currentScore = 0;
         scoreIndex = 0;
         count++;
       }
-      console.log(partner);
+      console.log(partners);
 
-      return partner;
+      $("#partnerModalLabel").text(partners[index].name);
+      // cycles through all equal matches in modal
+      $("#next").on("click", function (event) {
+        event.preventDefault();
+        index++;
+        if (index === partners.length) {
+          index = 0;
+        }
+        $("#partnerModalLabel").text(partners[index].name);
+      });
+      return partners;
     });
   });
 </script>
