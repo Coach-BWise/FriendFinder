@@ -1,0 +1,36 @@
+#left-side-jumbo {
+  height: 100vh;
+  background: url(../assets/friends.jpg);
+  background-size: cover;
+  background-position: center;
+  padding: 0;
+  margin: 0;
+}
+#jumbo {
+  background-color: ghostwhite;
+  color: cadetblue;
+  align-items: center;
+  padding-top: 50px;
+  padding-bottom: 0;
+  margin: 0;
+}
+@media screen and (min-width: 768px) {
+  .jumbotron {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    color: inherit;
+    background-color: #eee;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  #left-side-jumbo {
+    height: 100vh;
+    max-width: auto;
+    position: absolute;
+  }
+  #jumbo {
+    background: none;
+    color: black;
+  }
+}
