@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>Tables Page</title>
+    <title>Friend Finder</title>
 
     <!-- Latest compiled and minified CSS -->
     <link
@@ -13,37 +13,41 @@
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
     />
+    <link rel="stylesheet" href="../assets/style.css" />
   </head>
   <body>
     <div class="container">
-      <div class="jumbotron">
-        <h1 class="text-center">
-          <span class="fa fa-users"></span> Friend Finder
-        </h1>
-        <hr />
-        <h2 class="text-center">Complete the Survey and find your friends.</h2>
-        <br />
+      <div class="row">
+        <div
+          class="col-sm-8 jumbotron jumbotron-fluid"
+          id="left-side-jumbo"
+        ></div>
 
-        <div class="text-center">
-          <a href="/survey">
-            <button class="btn btn-lg btn-primary">
-              <span class="fa fa-list-alt"></span> Start Survey
-            </button></a
-          >
-        </div>
-      </div>
+        <div class="col-sm-4 jumbotron jumbotron-fluid" id="jumbo">
+          <h1 class="text-center">
+            <span class="fa fa-users"></span> Friend Finder
+          </h1>
+          <hr />
+          <h2 class="text-center">
+            Complete the Survey and find your friends.
+          </h2>
+          <br />
 
-      <footer class="footer">
-        <div class="container">
-          <p>
+          <div class="text-center">
+            <a href="/survey">
+              <button class="btn btn-lg btn-primary">
+                <span class="fa fa-list-alt"></span> Start Survey
+              </button></a
+            >
+
             <a href="/api/friends"
-              ><button class="btn btn-lg btn-primary">
+              ><button class="btn btn-lg btn-primary my-3">
                 <span class="fa fa-user-circle"></span> Friends List
               </button></a
             >
-          </p>
+          </div>
         </div>
-      </footer>
+      </div>
     </div>
   </body>
 </html>
