@@ -1,6 +1,6 @@
 #left-side-jumbo {
   height: 100vh;
-  background: url(../assets/friends.jpg);
+  background: url(./friends.jpg);
   background-size: cover;
   background-position: center;
   padding: 0;
