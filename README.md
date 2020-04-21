@@ -4,7 +4,7 @@ This Project takes data from a survey and compares to other entries to match the
 
 ## Getting Started
 
-Go To: [Friend Finder]()
+Go To: [Friend Finder](https://wisefriend.herokuapp.com)
 
 ### How to Use
 
