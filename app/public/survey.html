@@ -21,7 +21,7 @@
     <div class="container">
       <div class="jumbotron">
         <h1 class="text-center">
-          <span class="fa fa-fire"></span> Friend Finder
+          <span class="fa fa-users"></span> Friend Finder
         </h1>
         <hr />
         <h2 class="text-center">Complete the Survey</h2>
@@ -44,6 +44,8 @@
                 <div class="form-group">
                   <h3><strong>Name</strong></h3>
                   <input type="text" id="name" />
+                  <h3><strong>Link to Photo</strong></h3>
+                  <input type="text" id="photoLink" />
                   <h3><strong>Question 1</strong></h3>
                   <h5>
                     You learn more from an instructional video than reading
@@ -584,11 +586,16 @@
                 <span aria-hidden="true">&times;</span>
               </button>
             </div>
-            <div class="modal-body">
-              ...add image here...
+            <div class="modal-body" id="photoDiv">
+              <img class="img-fluid" src="" alt="" />
             </div>
             <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" id="next">
+              <button
+                type="button"
+                class="btn btn-secondary"
+                id="next"
+                style="display: none;"
+              >
                 Next
               </button>
               <button
@@ -607,7 +614,7 @@
   </body>
 </html>
 
-<!-- BELOW CODE IS CRITICAL. IT HANDLES HOW FORM DATA IS SENT TO OUR SERVER -->
+<!-- BELOW CODE HANDLES HOW FORM DATA IS SENT TO OUR SERVER -->
 <script type="text/javascript">
   // In this code below we create the Front-end JavaScript which "POSTS" our form data to our express server.
   // In essence, when the user hits submit, jQuery grabs all of the fields then sends a post request to our api
@@ -615,15 +622,24 @@
 
   $(".submit").on("click", function (event) {
     event.preventDefault();
-
+    if (!$("#name").val()) {
+      alert("Please enter your name.");
+      return false;
+    }
     // Here we grab the form elements
     var scores = [];
     for (let i = 0; i < 10; i++) {
+      //verifies a Radio is selected for all questions
+      if (!$(`input[name="q${i + 1}Radio"]`).is(":checked")) {
+        alert("Please answer Question: " + (i + 1));
+        return false;
+      }
       scores.push(parseInt($(`input[name="q${i + 1}Radio"]:checked`).val()));
       $(`input[name="q${i + 1}Radio"]:checked`).prop("checked", false);
     }
     var newFriend = {
       name: $("#name").val(),
+      photo: $("#photoLink").val(),
       scores: scores,
     };
     var index = 0;
@@ -670,6 +686,10 @@
       console.log(partners);
 
       $("#partnerModalLabel").text(partners[index].name);
+      $("#photoDiv img").attr("src", partners[index].photo);
+      if (partners.length > 1) {
+        $("#next").css("display", "block");
+      }
       // cycles through all equal matches in modal
       $("#next").on("click", function (event) {
         event.preventDefault();
@@ -678,6 +698,7 @@
           index = 0;
         }
         $("#partnerModalLabel").text(partners[index].name);
+        $("#photoDiv img").attr("src", partners[index].photo);
       });
       return partners;
     });
